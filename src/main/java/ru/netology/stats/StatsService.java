@@ -17,18 +17,19 @@ public class StatsService {
         return totalSales / sales.length;
     }
 
-    // Метод для определения номера месяца с пиком продаж
     public int findMaxSalesMonth(long[] sales) {
-        long maxSales = sales[0];
         int maxMonth = 0;
+        long maxSale = sales[0];
         for (int i = 1; i < sales.length; i++) {
-            if (sales[i] > maxSales) {
-                maxSales = sales[i];
+            if (sales[i] >= maxSale) {
+                maxSale = sales[i];
                 maxMonth = i;
             }
         }
         return maxMonth + 1;
     }
+
+
 
     // Метод для определения номера месяца с минимальными продажами
     public int findMinSalesMonth(long[] sales) {
