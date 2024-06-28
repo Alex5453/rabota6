@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StatsServiceTest {
 
-    @org.testng.annotations.Test
+    @Test
     void shouldCalculateTotalSales() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -72,3 +72,4 @@ public class StatsServiceTest {
         assertEquals(expected, actual);
     }
 }
+
